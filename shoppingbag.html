@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/initialization.css" />
+    <link rel="stylesheet" href="./css/shoppingbag.css" />
+  </head>
+  <body>
+    <header>
+      <div class="login">
+        <a href="index.html">TRENDIANO</a>
+      </div>
+      <div class="link-box">
+        <a href="sign.html">登录</a>
+        <a href="">注册</a>
+        <a href="">我的帐户</a>
+        <a href="details.html">我的收藏</a>
+        <a href="shoppingbag.html">购物袋(0)</a>
+      </div>
+    </header>
+    <div class="main">
+      <div class="edge">
+        <div class="cart">
+          <div class="bag">
+            <img src="./images/shoppingbag/buy_step_1.png" alt="" />
+            <h3>购物袋</h3>
+          </div>
+          <div class="cart-tip">
+            <span class="before"></span>
+            <span class="after"></span>
+            优惠：单笔消费，满699元免邮
+          </div>
+          <div class="kong">
+            购物袋还是空的哦，快去挑选心仪的衣服吧~
+          </div>
+          <div class="cart-content">
+            <table class="shoppingcart">
+              <thead></thead>
+              <tbody></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="login">
+        <img src="./images/shoppingbag/brand_trendiano.png" alt="" />
+      </div>
+      <p>
+        <a href="">隐私申明</a>
+        <a href="">联系我们</a>
+      </p>
+      <p>
+        Copyright @ 2010-2020 广州赫基信息科技有限公司版权所有
+        增值电信业务经营许可证 粤B2-20100553 粤ICP备10229258-4号
+      </p>
+    </footer>
+    <script src="./js/jquery-3.4.1.min.js"></script>
+    <script>
+      var product = [
+        {
+          productName: "英文标语印花短袖T恤",
+          productImg:
+            "http://img1.ochirly.com.cn/wcsstore/TrendyCatalogAssetStore/images/trendy/trendiano/2020/b/3RC2022830420/3RC2022830420_s_1.jpg",
+          articleNumber: "货号：3RC2022830420",
+          productSize: "橙色/L",
+          unitPrice: 499,
+          productNumber: 1,
+          rechooseProduct: [
+            "http://img1.ochirly.com.cn/wcsstore/TrendyCatalogAssetStore/images/trendy/trendiano/2020/b/3RC2022830018/3RC2022830018_s_1.jpg",
+            "http://img1.ochirly.com.cn/wcsstore/TrendyCatalogAssetStore/images/trendy/trendiano/2020/b/3RC2022830090/3RC2022830090_s_1.jpg",
+            "http://img1.ochirly.com.cn/wcsstore/TrendyCatalogAssetStore/images/trendy/trendiano/2020/b/3RC2022830420/3RC2022830420_s_1.jpg",
+          ],
+        },
+        {
+          productName: "衬衣刺绣标语长袖衬衫",
+          productImg:
+            "http://img1.ochirly.com.cn/wcsstore/TrendyCatalogAssetStore/images/trendy/trendiano/2020/b/3RC2012590000/3RC2012590000_s_1.jpg",
+          articleNumber: "货号：3RC2012590000",
+          productSize: "漂白/M",
+          unitPrice: 699,
+          productNumber: 1,
+          rechooseProduct: [
+            "http://img1.ochirly.com.cn/wcsstore/TrendyCatalogAssetStore/images/trendy/trendiano/2020/b/3RC2012590000/3RC2012590000_s_1.jpg",
+          ],
+        },
+        {
+          productName: "宽松连帽短袖风衣外套",
+          productImg:
+            "http://img1.ochirly.com.cn/wcsstore/TrendyCatalogAssetStore/images/trendy/trendiano/2020/b/3RC2092100510/3RC2092100510_s_1.jpg",
+          articleNumber: "货号：3RC2092100510",
+          productSize: "绿色/M",
+          unitPrice: 509,
+          productNumber: 1,
+          rechooseProduct: [
+            "http://img1.ochirly.com.cn/wcsstore/TrendyCatalogAssetStore/images/trendy/trendiano/2020/b/3RC2092100010/3RC2092100010_s_1.jpg",
+            "http://img1.ochirly.com.cn/wcsstore/TrendyCatalogAssetStore/images/trendy/trendiano/2020/b/3RC2092100510/3RC2092100510_s_1.jpg",
+          ],
+        },
+        {
+          productName: "棉质胶印人物短袖T恤",
+          productImg:
+            "http://img1.ochirly.com.cn/wcsstore/TrendyCatalogAssetStore/images/trendy/trendiano/2020/b/3RC2021130770/3RC2021130770_s_1.jpg",
+          articleNumber: "货号：3RC2021130770",
+          productSize: "粉紫/M",
+          unitPrice: 299,
+          productNumber: 1,
+          rechooseProduct: [
+            "http://img1.ochirly.com.cn/wcsstore/TrendyCatalogAssetStore/images/trendy/trendiano/2020/b/3RC2021130090/3RC2021130090_s_1.jpg",
+            "http://img1.ochirly.com.cn/wcsstore/TrendyCatalogAssetStore/images/trendy/trendiano/2020/b/3RC2021130770/3RC2021130770_s_1.jpg",
+          ],
+        },
+      ];
+      //如果有数据，则显示数据，没数据则显示空空如也
+
+      if (product.length) {
+        //创建标签
+        var tr = $(`<tr>
+          <th>&nbsp;</th>
+          <th>&nbsp;</th>
+          <th>商品名称</th>
+          <th>颜色/尺码</th>
+          <th>单价</th>
+          <th>数量</th>
+          <th>小计</th>
+        </tr>`);
+        $("table thead").append(tr);
+        for (var i = 0; i < product.length; i++) {
+          var tr = $("<tr>");
+          var td = $(`
+          <td><input class='radio' type = "checkbox" checked/></td>
+          <td><a href="javascript:void(0)"><img src='${
+            product[i].productImg
+          }'alt=""/></a></td>
+          <td>
+            <div class="pro-information">
+            <p>TRENDIANO</p>
+            <p><a href="">${product[i].productName}</a></p>
+            <p>${product[i].articleNumber}</p>
+            </div>
+          </td>
+          <td class="pro-size"><a class="size" href="javascript:void(0)">${
+            product[i].productSize
+          }</a></td>
+          <td class='pro-unitprice'><span class="unitprice">￥${
+            product[i].unitPrice
+          }</span></td>
+          <td class='num'><div class="qty-num">
+          <span class='prev'></span>
+          <input class="protnum" type="text" value="1" readonly="readonly" />
+          <span class='next'></span><div class='coll-delete'>
+          <a class='collection' href="javascript:;">收藏</a> /
+          <a class='delete' href="javascript:;">删除</a>
+          </div></td>
+          <td class= 'pro-sumprice'><span class="xiaoji">￥${
+            product[i].productNumber * product[i].unitPrice
+          }</span></td>`);
+          tr.append(td);
+          $("tbody").append(tr);
+        }
+
+        var operation = $(` <div class="operation">
+        <input class="all" id="skSelectAll" type="checkbox" checked />
+        <label for="skSelectAll">全选</label>
+        <a class="delete-checkbox" href="javascript:void(0)">删除已选</a>
+      </div>`);
+        $(".edge").append(operation);
+        var settlement = $(`<div class="settlement">
+        <p>已选：<span class="total-num"></span> 件</p>
+        <p>总计金额（不含金额）：￥ <span class="total-price"></span></p>
+        <button>马上结算</button>
+      </div>`);
+        $(".edge").append(settlement);
+        //全选复选框的改变事件，查看是否全选
+        $(".operation .all").change(function () {
+          var state = $(this).prop("checked");
+          console.log(state);
+          $("table td input:checkbox").prop("checked", state);
+        });
+        //复选框的改变，当前商品是否选中
+        $(".radio").change(function () {
+          var state = $(this).prop("checked");
+          if (state) {
+            var ishasAllChecked = true;
+            $(".radio").each(function () {
+              if (!$(this).prop("checked")) {
+                ishasAllChecked = false;
+              }
+            });
+            $(".operation .all").prop("checked", ishasAllChecked);
+          } else {
+            $(".operation .all").prop("checked", false);
+          }
+          getTotal($(".radio"));
+        });
+        //计算总价和选中商品数
+        getTotal($(".radio"));
+        function getTotal(allProduct) {
+          var totalNum = 0;
+          var totalPrice = 0;
+          allProduct.each(function () {
+            if ($(this).prop("checked")) {
+              totalNum =
+                totalNum + $(this).parents("tr").find(".protnum").val() * 1;
+              totalPrice =
+                totalPrice +
+                $(this).parents("tr").find(".unitprice").text().slice(1) *
+                  $(this).parents("tr").find(".protnum").val() *
+                  1;
+            }
+          });
+          $(".total-num").text(totalNum);
+          $(".total-price").text(totalPrice);
+        }
+        //购物车是否为空
+        function kong(ele) {
+          console.log(ele);
+          if (!ele) {
+            $(".kong").css("display", "block");
+            $("table").css("display", "none");
+            $(".edge .operation").css("display", "none");
+            $(".edge .settlement").css("display", "none");
+          }
+        }
+        //删除商品
+        $("table td .qty-num .coll-delete .delete").click(function () {
+          $(this).parents("tr").remove();
+          getTotal($(".radio"));
+          kong($("table tbody tr").length);
+          $(".radio").change();
+        });
+        //收藏商品
+        $("table td .qty-num .coll-delete .collection").click(function () {
+          alert("该商品收藏成功");
+        });
+        //删除选中的商品
+        $(".operation .delete-checkbox").click(function () {
+          $(".radio").each(function () {
+            if ($(this).prop("checked")) {
+              $(this).parents("tr").remove();
+            }
+          });
+          getTotal($(".radio"));
+          kong($("table tbody tr").length);
+        });
+        //上箭头单击事件
+        $("table td .prev").click(function () {
+          var num = $(this).siblings(".protnum").val() * 1;
+          var price =
+            $(this).parents("tr").find(".unitprice").text().slice(1) * 1;
+          num = num + 1;
+          $(this).siblings(".protnum").val(num);
+          $(this)
+            .parents("tr")
+            .find(".xiaoji")
+            .text(`￥${num * price}`);
+          getTotal($(".radio"));
+        });
+        //下箭头单击事件
+        $("table td .next").click(function () {
+          var num = $(this).siblings(".protnum").val() * 1;
+          var price =
+            $(this).parents("tr").find(".unitprice").text().slice(1) * 1;
+          if (num <= 1) {
+            num = 1;
+          } else {
+            num = num - 1;
+            $(this).siblings(".protnum").val(num);
+            $(this)
+              .parents("tr")
+              .find(".xiaoji")
+              .text(`￥${num * price}`);
+          }
+          getTotal($(".radio"));
+        });
+      } else {
+        $(".kong").css("display", "block");
+        $("table").css("display", "none");
+        $(".edge .operation").css("display", "none");
+        $(".edge .settlement").css("display", "none");
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,89 @@
+body {
+  width: 100%;
+  height: 100%;
+}
+
+.wrap {
+  background-image: url("../images/login_trendiano.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+  min-width: 950px;
+  height: 100%;
+  height: 100%;
+  min-height: 445px;
+  padding-bottom: 18%;
+}
+
+
+.wrap .sign-in {
+  width: 400px;
+  list-style: none;
+  background-color: #fff;
+  padding: 30px;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+}
+.wrap .sign-in .tittle {
+  font-size: 14px;
+  font-weight: 800;
+  padding-bottom: 8px;
+}
+.wrap .sign-in li {
+  margin-bottom: 8px;
+  position: relative;
+}
+ul li input {
+  width: 50%;
+  line-height: 20px;
+  padding: 3px;
+  border: 1px solid #f0f0ef;
+}
+ul li .phone-number {
+  width: 100%;
+}
+ul li img{
+  height: 30px;
+  padding-top: 8px;
+  position: absolute;
+  left: 215px;
+  top: -10px;
+}
+.wrap .sign-in li button {
+  height: 26px;
+  padding: 0 8px;
+  color: #fff;
+  background-color: #f93d69;
+  cursor: pointer;
+  border: none;
+}
+.wrap .sign-in .subit {
+  margin-top: 16px;
+}
+.wrap .sign-in .subit a {
+  width: 100%;
+  padding: 6px 0;
+  text-align: center;
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  background-color: #f93d69;
+}
+.wrap .sign-in li:nth-child(7) {
+  text-align: right;
+}
+.wrap .sign-in li:nth-child(7) a {
+  line-height: 30px;
+  text-decoration: none;
+  font-size: 12px;
+  color: #0d5b82;
+  margin-left: 5px;
+}
+.wrap .sign-in li .phone_error{
+  color: #f93d69;
+  font-size: 12px;
+  line-height: 18px;
+  display: none;
+}

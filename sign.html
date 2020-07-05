@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/initialization.css" />
+   <link rel="stylesheet" href="./css/sign.css">
+  </head>
+  <body>
+    <div class="wrap">
+      <a class="bg" href=""></a>
+      <ul class="sign-in">
+        <li class="tittle">
+          欢迎回来！请登录
+        </li>
+        <li>
+          <input class="phone-number" type="text" placeholder="手机号码" />
+        </li>
+        <li>
+          <input type="text" placeholder="验证码" />
+          <img
+              src="https://passport.trendiano.com/kaptcha.jpg?sessionId=aaajUZgFD3xjZdrUs8Ckx"
+              alt=""
+            />
+        </li>
+        <li>
+          <input type="text" placeholder="手机动态码" />
+          <button for="">获取动态码</button>
+        </li>
+        <li>
+          <div class="phone_error">手机号码格式不正确</div>
+        </li>
+        <li class="subit">
+          <a href="index.html">登录</a>
+        </li>
+        <li>
+          <a href="">我要注册</a>
+          <a href="">忘记密码</a>
+        </li>
+       
+      </ul>
+    </div>
+    <script src="./js/jquery-3.4.1.min.js"></script>
+    <script>
+      $(".phone-number").blur(function(){
+        var num = /^1[0-9]{10}$/
+        if(!num.test($(".phone-number").val())){
+          $('.phone_error').css('display','block') 
+        }else{
+          $('.phone_error').css('display','none') 
+        }
+      })
+      
+    </script>
+  </body>
+</html>

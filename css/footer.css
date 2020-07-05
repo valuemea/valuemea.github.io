@@ -1,0 +1,174 @@
+footer {
+  border-top: 4px solid #c1a75f;
+  background-image: url("../images/footer/footer_bg_tre.png");
+  padding-top: 10px;
+}
+footer .container {
+  padding: 15px 25px;
+}
+footer .wrap {
+  height: 317px;
+  border-right: 1px solid #d8d8d8;
+  padding-right: 65px;
+  margin-right: 65px;
+  float: left;
+}
+footer .wrap:last-child {
+  padding-right: 0;
+  margin-right: 0;
+  border: 0;
+}
+
+footer h3 {
+  font-size: 14px;
+  line-height: 30px;
+  color: #a0a0a0;
+  margin-bottom: 8px;
+  margin-top: 0;
+}
+footer h6 {
+  font-size: 14px;
+  color: #a0a0a0;
+  line-height: 30px;
+  margin-bottom: 8px;
+}
+
+footer .monthdate span {
+  width: 54px;
+  height: 54px;
+  display: block;
+  color: #666;
+  font-size: 14px;
+  text-align: center;
+  background: #fff;
+  margin-bottom: 2px;
+  padding: 0;
+}
+footer .monthdate span em {
+  font-size: 29px;
+  line-height: 29px;
+  font-style: normal;
+}
+footer .container .wrap:nth-child(2) a {
+  display: block;
+  padding-left: 30px;
+  line-height: 24px;
+  color: #666;
+  font-size: 12px;
+  background-image: url("../images/icon_tre.png");
+  background-position: -595px -400px;
+}
+footer .container .wrap:nth-child(2) a:hover {
+  color: #333;
+}
+footer p {
+  margin: 0;
+}
+footer p a {
+  text-decoration: none;
+  line-height: 24px;
+  color: #666;
+  font-size: 12px;
+  margin-right: 10px;
+}
+footer a:hover {
+  color: #333;
+}
+footer ul {
+  list-style: none;
+  padding: 0;
+}
+footer ul li {
+  margin-bottom: 12px;
+}
+footer ul li span{
+  display: block;
+  padding-left: 30px;
+  line-height: 24px;
+  color: #666;
+  font-size: 12px;
+  background-image: url("../images/icon_tre.png");
+ 
+}
+footer ul li:nth-child(1) span {
+  background-position: 3px -194px;
+}
+footer ul li:nth-child(2) span {
+  background-position: -298px -200px;
+}
+footer ul li:nth-child(3) span {
+  background-position: -595px -200px;
+}
+footer ul li:nth-child(4) span {
+  background-position: -600px -300px;
+}
+footer ul li:last-child {
+  height: 30px;
+  background-image: url("../images/icon_tre.png");
+  background-position: -600px -300px;
+}
+footer ul li:last-child span {
+  background-image: url("../images/icon_tre.png");
+  background-position: 0 -400px;
+  height: 30px;
+  margin-left: 60px;
+}
+footer .down {
+  background-color: #000;
+  padding: 10px 0;
+  width: 100%;
+  position: relative;
+}
+footer .down .login {
+  width: 170px;
+  height: 70px;
+  background-image: url("../images/icon_tre.png");
+  background-position: 0 -482px;
+  position: absolute;
+  left: 24%;
+}
+footer .down .box {
+  width: 360px;
+  margin: 0 auto;
+  
+}
+
+footer .down p {
+  font-size: 12px;
+  color: #777;
+}
+footer .down p:nth-child(1) a {
+  margin-right: 14px;
+  color: #ccc;
+}
+footer .down p:nth-child(3) a:nth-child(1) {
+  margin-right: 15px;
+}
+footer .down p a:hover {
+  color: #c9a063;
+}
+.boxx {
+  position: fixed;
+  bottom: 0;
+  right: 200px;
+}
+.boxx a {
+  width: 34px;
+  background-color: #1a1a1a;
+  font-size: 14px;
+  line-height: 24px;
+  display: block;
+  text-align: center;
+  padding: 3px;
+  color: #fff;
+}
+.boxx a:nth-child(1){
+  opacity: 0;
+  transition: 0.2s;
+
+}
+.boxx a:nth-child(2) {
+  font-size: 12px;
+  line-height: 16px;
+  background-color: #c9a063;
+}

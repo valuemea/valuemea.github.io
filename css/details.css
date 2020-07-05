@@ -1,0 +1,371 @@
+header{
+  margin-bottom: 70px;
+}
+header .bread {
+  width: 100%;
+  height: 40px;
+  background-color: #313131;
+  padding: 0 260px;
+  position: absolute;
+  top: 100%;
+}
+header .bread a {
+  width: 18px;
+  height: 40px;
+  display: block;
+  float: left;
+  background-image: url("../images/icon_tre.png");
+  background-position: -3px -1186px;
+}
+
+header .bread span {
+  font-size: 12px;
+  line-height: 40px;
+  float: left;
+  color: #999;
+}
+.main {
+  margin-bottom: 20px;
+  /* margin-top: 200px; */
+  /* z-index: 12; */
+}
+.picture {
+  float: left;
+  margin-top: 10px;
+  position: relative;
+}
+.picture .smallpic {
+  float: left;
+  width: 72px;
+  height: 640px;
+  padding: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.picture .smallpic span {
+  width: 72px;
+  height: 20px;
+  background-color: #000;
+  opacity: 0.7;
+  background-image: url("../images/arrow_tre.png");
+}
+.picture .smallpic .up-arrow {
+  background-position: 26px -391px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.picture .smallpic .down-arrow {
+  background-position: 26px -488px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.picture .bigpic {
+  float: left;
+  width: 360px;
+  height: 640px;
+  margin-left: 70px;
+  position: relative;
+ 
+}
+.picture .bigpic img {
+  width: 100%;
+}
+.picture .bigpic .magnifier {
+  width: 254px;
+  height: 282px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: 1px solid #ccc;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+}
+.picture .bigpic-box {
+  width: 508px;
+  height: 564px;
+  position: absolute;
+  left: 500px;
+  top: 0;
+  overflow: hidden;
+  border: 1px solid #ccc;
+  display: none;
+}
+.picture .bigpic-box img {
+  width: 720px;
+  position: absolute;
+  z-index: 2;
+}
+.info {
+  float: right;
+  width: 430px;
+  margin-top: 85px;
+}
+
+.info ul li {
+  margin-bottom: 18px;
+}
+.info ul .tit p {
+  font-size: 20px;
+  color: #000;
+  line-height: 30px;
+  font-weight: 400;
+}
+
+.info ul .tit h2 {
+  font-size: 18px;
+  color: #333;
+  margin: 0;
+}
+.info ul .tit p:nth-child(3) {
+  font-size: 11px;
+  margin-left: 6px;
+  color: #aaa;
+  line-height: 30px;
+  margin-bottom: -10px;
+  margin-top: 5px;
+}
+.info ul .price {
+  font-size: 18px;
+  color: #a40035;
+}
+.info ul .color span,
+.info ul .size span {
+  font-size: 12px;
+  line-height: 26px;
+  color: #666;
+  float: left;
+}
+.info ul .color img {
+  padding: 3px;
+  margin-right: 5px;
+  border: 2px solid #fff;
+}
+.info ul .size a {
+  width: 26px;
+  height: 26px;
+  margin-right: 2px;
+  font-size: 14px;
+  color: #000;
+  display: block;
+  float: left;
+  line-height: 26px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.info ul .size .sizeb {
+  display: block;
+  background-image: url("../images/icon_tre.png");
+  background-position: -300px -596px;
+  padding-left: 28px;
+  margin-left: 10px;
+}
+.info ul .size .sizeb:hover{
+  color: #c9a063;
+  background-position: -601px -1193px;
+}
+.info ul .size{
+  position: relative;
+}
+.info ul .size .sizeInfo{
+  width: 415px;
+  background-color: #fff;
+  box-shadow: 0 0 12px #000;
+  position: absolute;
+  left: -22%;
+  top: 82px;
+  border: 1px solid #ccc;
+  padding: 20px;
+  display: none;
+}
+.info ul .size .sizeInfo .info-tit {
+  color: #666;
+  cursor: pointer;
+  height: 34px;
+  font-size: 12px;
+}
+.info ul .size .sizeInfo .info-tit span {
+  display: block;
+  float: right;
+  width: 15px;
+  height: 15px;
+  background: url("../images/icon_tre.png") no-repeat;
+  background-position: -600px -1298px;
+}
+.info .ul .size .sizeInfo .info-con {
+  padding: 0 12px 12px;
+}
+.info .ul .size .sizeInfo table {
+  border-top: 1px solid #eee;
+  margin: 12px 0;
+  width: 100%;
+}
+
+.info ul .size .sizeInfo table th,
+td {
+  width: 2%;
+  line-height: 31px;
+  border-bottom: 1px solid #eee;
+  text-align: center;
+  font-size: 12px;
+}
+.info ul .size .sizeInfo table th {
+  font-weight: 700;
+}
+.info ul .size .sizeInfo table td {
+  color: #666;
+}
+.info ul .purchase {
+  padding: 5px 0;
+}
+.info ul .purchase span:nth-child(1) {
+  font-size: 16px;
+  margin-right: 12px;
+  color: #333;
+  float: left;
+}
+
+.info ul .purchase span:nth-child(2) {
+  background-image: url("../images/icon_tre.png");
+  background-position: -600px -600px;
+  color: #333;
+  font-size: 14px;
+  line-height: 24px;
+  padding-left: 45px;
+  display: block;
+  float: left;
+}
+.info ul .purchase span:nth-child(2):hover {
+  color: #c9a063;
+}
+.info ul .purchase a {
+  font-size: 14px;
+  color: #000;
+  background-image: url("../images/icon_tre.png");
+  background-position: -600px -698px;
+  padding-left: 18px;
+  margin-left: 30px;
+}
+.info ul .purchase a:hover {
+  color: #903;
+}
+.info ul li:nth-child(6) {
+  font-size: 12px;
+  color: #313131;
+  text-decoration: underline;
+}
+.info ul li:nth-child(7) a {
+  width: 428px;
+  border: 1px solid #000;
+  font-size: 16px;
+  line-height: 40px;
+  background: #fff;
+  text-align: center;
+  color: #333;
+  display: block;
+}
+.info ul li:nth-child(7) a:hover {
+  color: #c9a063;
+  border: 1px solid #c9a063;
+}
+.info ul li:last-child p{
+ margin-left: 76%;
+}
+.info ul li:last-child span{
+  font-size: 12px;
+  color: #666;
+  width: 40px;
+  height: 20px;
+  display: block;
+  float:left;
+}
+.info ul li:last-child span:nth-child(2){
+  background-image: url('../images/icon_tre.png');
+  background-position: 0 -701px;
+  width: 30px;
+}
+.info ul li:last-child span:nth-child(2):hover{
+  background-position: -300px -802px;
+}
+
+
+.info ul li:last-child span:nth-child(3){
+  background-image: url('../images/icon_tre.png');
+  background-position: 0 -701px;
+  background-position: -299px -701px;
+  width: 30px;
+}
+.info ul li:last-child span:nth-child(3):hover{
+  background-position: -600px -802px;
+}
+.content {
+  padding: 80px;
+}
+.content .left {
+  float: left;
+  width: 50%;
+
+  padding-right: 40px;
+}
+.content .right {
+  width: 50%;
+  float: left;
+  padding-left: 40px;
+  border-left: 1px solid #eee;
+}
+.content .left li,
+.content .right li {
+  margin-bottom: 0;
+}
+.content .left p,
+.content .right p {
+  font-size: 12px;
+  color: #666;
+  line-height: 2;
+  float: left;
+  display: block;
+  margin-bottom: 0;
+}
+.content .left li .name,
+.content .right li .name {
+  width: 20%;
+}
+.content .left li .text,
+.content .right li .text {
+  width: 80%;
+}
+.content .right li .wash {
+  width: 80%;
+  float: left;
+}
+.content .right li img {
+  width: 20%;
+}
+.viewhistory {
+  padding-left: 80px;
+}
+.viewhistory p {
+  font-size: 12px;
+  color: #666;
+  line-height: 38px;
+  display: block;
+}
+.viewhistory .wrap {
+  margin-left: 30px;
+  width: 188px;
+}
+.viewhistory img {
+  width: 100%;
+  padding: 0 30px;
+  margin-bottom: 10px;
+}
+.viewhistory .wrap p {
+  line-height: 18px;
+  margin-bottom: 2px;
+}
+.viewhistory .wrap:hover p{
+  color: #c9a063;
+}
